@@ -20,6 +20,13 @@ void showHeading() {
     ColoredConsole::setConsoleColor(DEFAULT_COLOR);
 }
 
+// Shows the message indicating the wrong number of arguments for the command
+void showArgumentsNumberError() {
+    ColoredConsole::setConsoleColor(ERROR_COLOR);
+    std::cout << "\nInvalid number of arguments. See \"help\" for usage instructions." << std::endl << std::endl;
+    ColoredConsole::setConsoleColor(DEFAULT_COLOR);
+}
+
 // Displays the available commands and their usage instructions.
 void showHelp() {
     std::cout << "\n -----------------------------------------------------------------------------------------" << std::endl;
@@ -73,9 +80,7 @@ int main() {
         }
         else if (command == "cd") {
             if (argument1.empty()) {
-                ColoredConsole::setConsoleColor(ERROR_COLOR);
-                std::cout << "\nInvalid number of arguments. See \"help\" for usage instructions." << std::endl << std::endl;
-                ColoredConsole::setConsoleColor(DEFAULT_COLOR);
+                showArgumentsNumberError();
                 ss.clear();
                 continue;
             }
@@ -83,9 +88,7 @@ int main() {
         }
         else if (command == "mkdir") {
             if (argument1.empty()) {
-                ColoredConsole::setConsoleColor(ERROR_COLOR);
-                std::cout << "\nInvalid number of arguments. See \"help\" for usage instructions." << std::endl << std::endl;
-                ColoredConsole::setConsoleColor(DEFAULT_COLOR);
+                showArgumentsNumberError();
                 ss.clear();
                 continue;
             }
@@ -93,9 +96,7 @@ int main() {
         }
         else if (command == "mkfile") {
             if (argument1.empty()) {
-                ColoredConsole::setConsoleColor(ERROR_COLOR);
-                std::cout << "\nInvalid number of arguments. See \"help\" for usage instructions." << std::endl << std::endl;
-                ColoredConsole::setConsoleColor(DEFAULT_COLOR);
+                showArgumentsNumberError();
                 ss.clear();
                 continue;
             }
@@ -103,9 +104,7 @@ int main() {
         }
         else if (command == "rename") {
             if (argument1.empty() || argument2.empty()) {
-                ColoredConsole::setConsoleColor(ERROR_COLOR);
-                std::cout << "\nInvalid number of arguments. See \"help\" for usage instructions." << std::endl << std::endl;
-                ColoredConsole::setConsoleColor(DEFAULT_COLOR);
+                showArgumentsNumberError();
                 ss.clear();
                 continue;
             }
@@ -113,9 +112,7 @@ int main() {
         }
         else if (command == "delete") {
             if (argument1.empty()) {
-                ColoredConsole::setConsoleColor(ERROR_COLOR);
-                std::cout << "\nInvalid number of arguments. See \"help\" for usage instructions." << std::endl << std::endl;
-                ColoredConsole::setConsoleColor(DEFAULT_COLOR);
+                showArgumentsNumberError();
                 ss.clear();
                 continue;
             }
@@ -123,9 +120,7 @@ int main() {
         }
         else if (command == "move") {
             if (argument1.empty() || argument2.empty()) {
-                ColoredConsole::setConsoleColor(ERROR_COLOR);
-                std::cout << "\nInvalid number of arguments. See \"help\" for usage instructions." << std::endl << std::endl;
-                ColoredConsole::setConsoleColor(DEFAULT_COLOR);
+                showArgumentsNumberError();
                 ss.clear();
                 continue;
             }
@@ -136,9 +131,7 @@ int main() {
         }
         else if (command == "tree") {
             if (argument1.empty()) {
-                ColoredConsole::setConsoleColor(ERROR_COLOR);
-                std::cout << "\nInvalid number of arguments. See \"help\" for usage instructions." << std::endl << std::endl;
-                ColoredConsole::setConsoleColor(DEFAULT_COLOR);
+                showArgumentsNumberError();
                 ss.clear();
                 continue;
             }
@@ -146,9 +139,7 @@ int main() {
         }
         else if (command == "permit") {
             if (argument1.empty() || argument2.empty()) {
-                ColoredConsole::setConsoleColor(ERROR_COLOR);
-                std::cout << "\nInvalid number of arguments. See \"help\" for usage instructions." << std::endl << std::endl;
-                ColoredConsole::setConsoleColor(DEFAULT_COLOR);
+                showArgumentsNumberError();
                 ss.clear();
                 continue;
             }
